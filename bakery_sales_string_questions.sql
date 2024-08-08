@@ -7,7 +7,6 @@ SET search_path TO bakery_schema;
 SHOW search_path;
 
 
-
 -- 1.  Generate a daily sales summary where the day of the week is represented 
 -- by its first three letters, followed by the date and total sales. 
 -- For example: "MON 2019-07-01: ₩1234.56". 
@@ -32,8 +31,6 @@ ORDER BY MIN(order_date)
 -- "SUN 2019-07-14:  ₩212000"
 -- "MON 2019-07-15:  ₩30900"
 -- "WED 2019-07-17:  ₩74100"
-
-
 
 
 
@@ -122,7 +119,6 @@ WITH ranked_product_sales AS (
 
 
 
-
 /********* Notes **************/
 
 -- Both RANK() and DENSE_RANK() would work in this case, but there is a 
@@ -175,8 +171,6 @@ WITH ranked_product_sales AS (
 
 
 /********* Notes **************/
-
-
 
 
 
@@ -264,8 +258,6 @@ ORDER BY order_date, order_id;
 
 
 
-
-
 -- 4. Generate a daily product diversity report. For each day, provide a 
 -- single column that lists all unique products sold, separated by commas 
 -- and ordered alphabetically. Output the date and the product list.
@@ -297,8 +289,6 @@ GROUP BY o.order_date;
 -- It then uses GROUP BY to organize the data by date and STRING_AGG with 
 -- DISTINCT to create a comma-separated list of unique products sold each day, 
 -- ordered alphabetically by default.
-
-
 
 
 
@@ -359,8 +349,6 @@ WHERE row_num = 1
 
 
 
-
-
 -- 6. For each product, create a string that represents its sales trend 
 -- over the last 7 days it was sold. The output should include a new column 
 -- with a string of 7 characters, each representing whether sales went up, down, 
@@ -368,7 +356,6 @@ WHERE row_num = 1
 -- Concatenate the quantity sold with the trend.
 -- Use 'U' for up (sales increased), 'D' for down (sales decreased), 
 -- and 'S' for same. For example: "5S-7U-4D-4S-3D-3S-7U".
-
 
 
 WITH ranked_sales AS (
@@ -504,10 +491,6 @@ ORDER BY
 
 
 
-
-
-
-
 -- 7.Write a query that generates a descriptive string for each order 
 -- in the sales table for the last 60 days. The output should include 
 -- the order_id, date, a concatenated string of all the products sold in that 
@@ -637,9 +620,6 @@ ORDER BY avg_delivery_fee;
 
 
 
-
-
-
 -- 9.Using the same logic for calculating the delivery fee 
 -- (total - (quantity * price)), write a query that categorizes 
 -- the delivery fees into ranges: "Low" for fees less than 2000, 
@@ -698,9 +678,7 @@ ORDER BY delivery_fee;
 
 
 
-
 -- Return the count of orders in each delivery fee category.
-
 
 WITH total_cte AS (
 SELECT o.order_id, 
@@ -759,7 +737,6 @@ ORDER BY orders_distribution DESC;
 -- for 621 orders, while the "High" category has the least number of orders at 481, 
 -- suggesting that most of the bakery's business comes from areas with 
 -- more affordable delivery fees.
-
 
 
 
@@ -889,11 +866,6 @@ ORDER BY TO_DATE(month, 'Mon, YYYY');
 
 
 
-
-
-
-
-
 -- 11. Write a SQL query to find the bottom 3 selling pastry and beverage products 
 -- for each month based on total quantity sold. The output should include the 
 -- month and year, along with the bottom 3 products in seperate columns 
@@ -990,8 +962,6 @@ ORDER BY TO_DATE(month, 'Mon, YYYY');
 
 
 
-
-
 -- TOP 3 PRODUCTS IN EACH CATEGORY
 
 
@@ -1061,7 +1031,6 @@ ORDER BY TO_DATE(month, 'Mon, YYYY');
 
 
 
-
 -- 12. For each order, create a summary string that includes the order ID, 
 -- total amount, and a concatenation of the first letter of each 
 -- unique product ordered along with its product ID with * seperating each productname
@@ -1084,9 +1053,14 @@ ON s.product_id = p.product_id
 GROUP BY o.order_id, o.total;
 
 
+-- Output (first few rows):
 
-
-
+-- "order_summary"
+-- "Order 1: ₩23800 (V20 * T5 * A16 * A1)"
+-- "Order 2: ₩15800 (O12 * A1 * T5)"
+-- "Order 3: ₩58000 (T5)"
+-- "Order 4: ₩14800 (P2 * V20 * A1)"
+-- "Order 5: ₩15600 (T5 * A1)"
 
 
 
@@ -1094,4 +1068,3 @@ GROUP BY o.order_id, o.total;
 
 
 -- 
-
