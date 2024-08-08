@@ -69,7 +69,44 @@ CREATE TABLE bakery_prices (
 
 SELECT * FROM bakery_sales;
 
+
+-- Output (first few rows):
+
+|      datetime         | day_of_week | total | place 	| angbutter | plain_bread | jam | americano | croissant | caffe_latte | tiramisu_croissant | cacao_deep | pain_au_chocolat | almond_croissant | croque_monsieur | mad_garlic | milk_tea | gateau_chocolat | pandoro | cheese_cake | lemon_ade | orange_pound | wiener | vanila_latte | berry_ade | tiramisu | merinque_cookies |
+|-----------------------|-------------|-------|-------	|-----------|-------------|-----|-----------|-----------|-------------|-------------------|------------|-----------------|------------------|-----------------|------------|----------|-----------------|---------|-------------|-----------|--------------|--------|--------------|-----------|----------|------------------|
+| 2019-07-11 15:35:00   | Thur        | 23800 |       	| 1         |             | 1   |           | 3         |             |                   |            |                 |                  |                 |            |          |                 |         |             |           |              |        |              |           |          | 1                |
+| 2019-07-11 16:10:00   | Thur        | 15800 |       	| 1         |             |     |           |           | 1           |                   |            |                 |                  |                 |            |          |                 |         |             |           |              |        | 1            |           |          |                  |
+| 2019-07-12 11:49:00   | Fri         | 58000 |       	|           |             |     |           |           |             |                   |            |                 |                  |                 |            |          |                 |         |             |           |              |        |              |           | 14       |                  |
+| 2019-07-13 13:19:00   | Sat         | 14800 |       	| 1         | 1           |     |           |           |             |                   |            |                 |                  |                 |            |          |                 |         |             |           |              |        | 1            |           |          |                  |
+-- ...
+	
+
 SELECT * FROM bakery_prices;
+
+-- Output:
+
+-- "name"	"price"
+-- "angbutter"	4800
+-- "plain bread"	3500
+-- "jam"	1500
+-- "ice coffe"	4000
+-- "croissant"	3500
+-- "ice coffe latter"	4500
+-- "tiramisu croissant"	4800
+-- "cacao deep"	4000
+-- "pain au chocolat"	3500
+-- "almond croissant"	4000
+-- "ice milk tea"	4500
+-- "gateau chocolat"	4000
+-- "pandoro"	4500
+-- "cheese cake"	5000
+-- "lemon ade"	4500
+-- "orange pound"	4500
+-- "wiener"	2500
+-- "valina latte"	4500
+-- "berry ade"	4500
+-- "tiramisu"	4500
+-- "merinque cookies"	4000
 
 
 -- data cleaning and transformation
@@ -395,6 +432,37 @@ SELECT * FROM sales;
 -- the appropriate translations in english
 
 
+-- retrieving the places from orders table
+
+SELECT DISTINCT place FROM orders;
+
+-- Output:
+
+-- "place"
+-- "퇴계동"
+-- "후평 3동"
+-- "소양동"
+-- "효자 2동"
+-- "교동"
+-- "석사동"
+-- "근화동"
+-- "신사우동"
+-- "약사명동"
+-- "조운동"
+-- "후평 2동"
+-- "동면"
+-- "강남동"
+-- "후평 1동"
+-- "효자 3동"
+-- "효자 1동"
+-- "교동 "
+-- "신동면"
+-- "동내면"
+
+
+
+-- update the places to the appropriate translation
+
 UPDATE orders
 SET place = CASE WHEN place = '소양동' THEN 'Soyang-dong'
 				 WHEN place = '효자 3동' THEN 'Hyoja3-dong' 
@@ -424,9 +492,44 @@ SET place = CASE WHEN place = '소양동' THEN 'Soyang-dong'
 
 SELECT * FROM orders;
 
+-- Output (first and last few rows):
+
+-- "order_id"	"order_date"	"order_time"	"day_of_week"	"total"	"place"
+-- 1	"2019-07-11"	"15:35:00"	"Thur"	23800	"NA"
+-- 2	"2019-07-11"	"16:10:00"	"Thur"	15800	"NA"
+-- 3	"2019-07-12"	"11:49:00"	"Fri"	58000	"NA"
+-- ...
+-- 1815	"2020-02-26"	"15:49:00"	"Wed"	21200	"Gyo-dong"
+-- 1816	"2020-02-26"	"16:13:00"	"Wed"	27900	"Hyoja2-dong"
+-- 1817	"2020-02-27"	"11:15:00"	"Thur"	23300	"Toegye-dong"
+
+
+
 SELECT * FROM products;
 
+-- Output (first few rows):
+
+-- "product_id"	"name"	"price"	"category"
+-- 1	"angbutter"	4800	"pastry"
+-- 2	"plain bread"	3500	"pastry"
+-- 3	"jam"	1500	"pastry"
+-- 4	"croissant"	3500	"pastry"
+-- 5	"tiramisu croissant"	4800	"pastry"
+-- 6	"cacao deep"	4000	"pastry"
+
+
+
 SELECT * FROM sales;
+
+-- Output (first few rows):
+
+-- "order_id"	"product_id"	"quantity"
+-- 1	20	1
+-- 1	5	3
+-- 1	16	1
+-- 1	1	1
+-- 2	12	1
+-- 2	1	1
 
 
 
