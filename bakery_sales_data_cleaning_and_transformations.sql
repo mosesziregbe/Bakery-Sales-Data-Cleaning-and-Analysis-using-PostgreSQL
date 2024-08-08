@@ -249,7 +249,7 @@ FROM bakery_sales
 WHERE mad_garlic IS NOT NULL;
 
 
--- count shows that are 412 records, so there are sales for americano product
+-- count shows there are 412 records, so there are sales for americano product
 
 SELECT COUNT(americano)
 FROM bakery_sales
