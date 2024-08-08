@@ -72,6 +72,7 @@ SELECT * FROM bakery_sales;
 
 -- Output (first few rows):
 
+
 |      datetime         | day_of_week | total | place 	| angbutter | plain_bread | jam | americano | croissant | caffe_latte | tiramisu_croissant | cacao_deep | pain_au_chocolat | almond_croissant | croque_monsieur | mad_garlic | milk_tea | gateau_chocolat | pandoro | cheese_cake | lemon_ade | orange_pound | wiener | vanila_latte | berry_ade | tiramisu | merinque_cookies |
 |-----------------------|-------------|-------|-------	|-----------|-------------|-----|-----------|-----------|-------------|-------------------|------------|-----------------|------------------|-----------------|------------|----------|-----------------|---------|-------------|-----------|--------------|--------|--------------|-----------|----------|------------------|
 | 2019-07-11 15:35:00   | Thur        | 23800 |       	| 1         |             | 1   |           | 3         |             |                   |            |                 |                  |                 |            |          |                 |         |             |           |              |        |              |           |          | 1                |
@@ -79,12 +80,15 @@ SELECT * FROM bakery_sales;
 | 2019-07-12 11:49:00   | Fri         | 58000 |       	|           |             |     |           |           |             |                   |            |                 |                  |                 |            |          |                 |         |             |           |              |        |              |           | 14       |                  |
 | 2019-07-13 13:19:00   | Sat         | 14800 |       	| 1         | 1           |     |           |           |             |                   |            |                 |                  |                 |            |          |                 |         |             |           |              |        | 1            |           |          |                  |
 -- ...
+
+
 	
+-- Inspect bakery_prices dataset
 
 SELECT * FROM bakery_prices;
 
--- Output:
 
+-- Output:
 -- "name"	"price"
 -- "angbutter"	4800
 -- "plain bread"	3500
@@ -109,6 +113,7 @@ SELECT * FROM bakery_prices;
 -- "merinque cookies"	4000
 
 
+
 -- data cleaning and transformation
 
 -- I noticed that each row for the bakery_sales contains a seperate record
@@ -125,6 +130,7 @@ SELECT * FROM bakery_prices;
 
 -- I will normalize the 2 tables (bakery_sales, bakery_prices) into
 -- 3 tables (orders, products, sales)
+
 
 
 -- create new table for orders
@@ -157,6 +163,7 @@ AND total IS NOT NULL;
 
 
 
+
 -- we have 2420 rows of data in the orders table
 
 SELECT * FROM orders;
@@ -168,6 +175,7 @@ SELECT * FROM orders;
 SELECT * FROM bakery_prices
 
 
+	
 -- create table for products
 
 DROP TABLE products;
