@@ -13,6 +13,7 @@ SHOW search_path;
 -- (Breakdown of Query / Notes)
 
 
+
 -- 1. What are the top 5 best-selling products by quantity? 
 -- How does this change if you consider total revenue instead?
 
@@ -61,6 +62,9 @@ LIMIT 5;
 
 -- top 5 products by revenue: 
 -- angbutter, tiramisu croissant, croissant, plain bread, orange pound
+
+
+
 
 
 
@@ -131,12 +135,19 @@ ORDER BY MIN(order_date);
 
 
 
+
+
+
+
+
 -- 3. Calculate the total sales for each pastry product on a monthly basis. 
 -- From the results, identify and return the top 3 selling pastry products 
 -- for each month, including the month and year, the product name, 
 -- and the corresponding total sales amount. 
 -- Ensure that the output is ordered chronologically by month.
 -- Do the same for beverage products
+
+
 
 -- FOR PASTRY PRODUCTS
 	
@@ -391,6 +402,12 @@ ORDER BY
 
 
 
+
+
+
+
+
+
 -- 4. What is the total sales distribution across different 
 -- product categories?
 
@@ -415,6 +432,11 @@ FROM category_cte;
 
 -- pastry category make up 88.33% of the total sales,
 -- while beverage accounts for a contribution of 11.67% of the total sales.
+
+
+
+
+
 
 
 
@@ -465,6 +487,10 @@ ORDER BY total_sales DESC;
 
 -- Low Sales on Tuesday: Tuesday has the lowest total sales by a 
 -- significant margin, indicating it might be the least busy day of the week.
+
+
+
+
 
 
 
@@ -545,6 +571,9 @@ ORDER BY weekday_orders DESC, weekend_orders DESC;
 
 
 
+
+
+
 -- 7. Are there any products that are frequently bought together? 
 -- What are the top 5 product pairs?
 
@@ -610,6 +639,14 @@ LIMIT 5;
 -- based on their count in descending order.
 
 
+
+
+
+
+
+
+
+
 -- 8. Is there a correlation between the day of the week and total daily sales? 
 -- Which day tends to have the highest sales?
 
@@ -667,6 +704,11 @@ ORDER BY total_sales DESC;
 
 
 
+
+
+
+
+
 -- 9. What percentage of orders include at least one beverage item 
 -- (like americano, latte, etc.)?
 
@@ -692,6 +734,9 @@ WHERE p.name IN (SELECT name FROM products WHERE category = 'beverage')
 
 
 
+
+
+	
 
 -- 10. Find the volume of orders by place. Additionally, determine the 
 -- percentage of the total orders for each place relative to the 
