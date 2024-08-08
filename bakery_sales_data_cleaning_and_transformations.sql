@@ -126,7 +126,7 @@ SELECT * FROM bakery_prices;
 -- This mean there will be a lot of NULL values for products that
 -- the customer did not order. 
 
--- Also this is a wide dataset, so I decided to normalized the tables
+-- Also, this is a wide dataset, so I decided to normalize the tables
 
 -- I will normalize the 2 tables (bakery_sales, bakery_prices) into
 -- 3 tables (orders, products, sales)
