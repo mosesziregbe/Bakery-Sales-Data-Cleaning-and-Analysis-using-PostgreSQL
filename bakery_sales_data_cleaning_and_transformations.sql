@@ -76,7 +76,7 @@ SELECT * FROM bakery_prices;
 
 -- I noticed that each row for the bakery_sales contains a seperate record
 -- or unique sale made during a particular day and time by a particular customer
--- and the bakery_sales table contains columns all products sold by the bakery store.
+-- and the bakery_sales table contains columns of all products sold by the bakery store.
 
 -- For a particular order, the product columns contains the quantity of the items
 -- ordered or sold. 
@@ -84,7 +84,7 @@ SELECT * FROM bakery_prices;
 -- This mean there will be a lot of NULL values for products that
 -- the customer did not order. 
 
--- Also this is a really wide dataset, so I decided to normalized the tables
+-- Also this is a wide dataset, so I decided to normalized the tables
 
 -- I will normalize the 2 tables (bakery_sales, bakery_prices) into
 -- 3 tables (orders, products, sales)
