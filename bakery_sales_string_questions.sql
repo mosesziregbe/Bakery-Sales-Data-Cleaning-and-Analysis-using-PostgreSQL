@@ -262,7 +262,6 @@ ORDER BY order_date, order_id;
 -- and ordered alphabetically. Output the date and the product list.
 
 
-
 SELECT o.order_date, STRING_AGG(DISTINCT p.name, ', ') AS products_sold
 FROM orders o
 JOIN sales s
@@ -270,8 +269,6 @@ ON o.order_id = s.order_id
 JOIN products p
 ON s.product_id = p.product_id
 GROUP BY o.order_date;
-
-
 
 
 -- Output (first few rows):
