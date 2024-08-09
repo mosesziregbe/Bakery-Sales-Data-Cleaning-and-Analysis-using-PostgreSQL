@@ -53,7 +53,6 @@ ORDER BY MIN(order_date)
 
 
 
-
 WITH ranked_product_sales AS (
     SELECT 
         TO_CHAR(o.order_date, 'YYYY - MM') AS month,
@@ -295,7 +294,6 @@ GROUP BY o.order_date;
 
 
 
-
 -- 5. Create a place ID for each place by taking the first 6 letters
 -- of the place name (converted to uppercase) and concatenating it with
 -- the last 3 digits of their first order ID. Output as (place-digit)
@@ -304,8 +302,6 @@ GROUP BY o.order_date;
 -- If the place name contains a hyphen (-), remove it before taking the first 6 letters.
 -- For example, if the place name is "Hyoja1-dong" and the
 -- first order ID is 67890, the output would be: (HYOJA1-890).
-
-
 
 
 SELECT place, 
@@ -319,8 +315,6 @@ FROM orders
 WHERE place != 'NA'
 ) row_orders
 WHERE row_num = 1
-
-
 
 
 -- Output:
@@ -516,7 +510,8 @@ JOIN sales s
 ON o.order_id = s.order_id
 JOIN products p
 ON s.product_id = p.product_id
-WHERE o.order_date BETWEEN ((SELECT MAX(order_date) FROM orders) - 60) AND (SELECT MAX(order_date) FROM orders)
+WHERE o.order_date BETWEEN 
+	((SELECT MAX(order_date) FROM orders) - 60) AND (SELECT MAX(order_date) FROM orders)
 )
 SELECT order_id, order_date, 
 	   STRING_AGG(CONCAT(quantity, ' x ', name), ', ') AS order_details, 
@@ -645,9 +640,9 @@ FROM total_cte
 GROUP BY place
 )
 SELECT place, delivery_fee, CASE WHEN delivery_fee < 2000 THEN 'Low'
-								 WHEN delivery_fee BETWEEN 2000 AND 2500 THEN 'Medium'
-								 WHEN delivery_fee > 2500 THEN 'High'
-								 END AS delivery_fee_category
+				 WHEN delivery_fee BETWEEN 2000 AND 2500 THEN 'Medium'
+				 WHEN delivery_fee > 2500 THEN 'High'
+				 END AS delivery_fee_category
 FROM delivery_cte
 ORDER BY delivery_fee;
 
@@ -699,8 +694,9 @@ GROUP BY place
 )
 , delivery_category_cte AS (
 SELECT place, delivery_fee, CASE WHEN delivery_fee < 2000 THEN 'Low'
-									 WHEN delivery_fee BETWEEN 2000 AND 2500 THEN 'Medium'
-								     WHEN delivery_fee > 2500 THEN 'High' END AS delivery_fee_category
+				 WHEN delivery_fee BETWEEN 2000 AND 2500 THEN 'Medium'
+				 WHEN delivery_fee > 2500 THEN 'High' 
+				 END AS delivery_fee_category
 FROM delivery_cte d
 )
 , orders_cte AS (
@@ -786,7 +782,6 @@ SELECT
 FROM ranked_sales
 GROUP BY month
 ORDER BY TO_DATE(month, 'Mon, YYYY');
-
 
 
 -- Output:
@@ -919,8 +914,6 @@ SELECT
 FROM ranked_sales
 GROUP BY month
 ORDER BY TO_DATE(month, 'Mon, YYYY');
-
-
 
 
 
