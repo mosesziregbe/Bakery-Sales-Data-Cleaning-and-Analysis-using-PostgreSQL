@@ -23,33 +23,33 @@ The original dataset (bakery_sales) contains information about bakery orders, in
 
 The dataset contains 27 columns.
 
-`datetime` : order time
-`day of week:` day of the week.
-`total`: Total Amount.
-`place`: customer's place
-`angbutter`: It's a pain's name. Pretzel filled with red beans and gourmet butter.
-`plain bread`: plain bread.
-`jam`: peach jam.
-`americano`: americano
-`croissant`: croissnat.
-`caffe latte`: caffe laffe.
-`tiramisu croissant`: Croissants filled with tiramisu cream and fruit.
-`cacao deep`: Croissant covered in Valrhona chocolate
-`pain au chocolate`: Pain au chocolate.
-`almond croissant`: Croissant filled with almond cream.
-`croque monsieur`:
-`mad garlic`:
-`milk tea`: Mariage Frères milk tea.
-`gateau chocolat`: piece of chocolate cake.
-`pandoro`: pandoro: Italian pain.
-`cheese cake`: Cheese cake.
-`lemon ade`: Lemon ade
-`orange pound`: Orange pound cake.
-`wiener`: sausage bread.
-`vanila latte`: Brewed with Madagascar vanilla bean.
-berry ade: berry ade.
-`tiramisu`: tiramisu cake.
-`merinque cookies`: cookies.
+- `datetime` : order time
+- `day of week:` day of the week.
+- `total`: Total Amount.
+- `place`: customer's place
+- `angbutter`: It's a pain's name. Pretzel filled with red beans and gourmet butter.
+- `plain bread`: plain bread.
+- `jam`: peach jam.
+- `americano`: americano
+- `croissant`: croissnat.
+- `caffe latte`: caffe laffe.
+- `tiramisu croissant`: Croissants filled with tiramisu cream and fruit.
+- `cacao deep`: Croissant covered in Valrhona chocolate
+- `pain au chocolate`: Pain au chocolate.
+- `almond croissant`: Croissant filled with almond cream.
+- `croque monsieur`:
+- `mad garlic`:
+- `milk tea`: Mariage Frères milk tea.
+- `gateau chocolat`: piece of chocolate cake.
+- `pandoro`: pandoro: Italian pain.
+- `cheese cake`: Cheese cake.
+- `lemon ade`: Lemon ade
+- `orange pound`: Orange pound cake.
+- `wiener`: sausage bread.
+- `vanila latte`: Brewed with Madagascar vanilla bean.
+- `berry ade`: berry ade.
+- `tiramisu`: tiramisu cake.
+- `merinque cookies`: cookies.
 
 
 ## Data Cleaning
@@ -96,29 +96,30 @@ The dataset is stored in a PostgreSQL database named bakery_db with the schema b
 
 ## Database Schema
 
+![ERD Diagram](https://github.com/mosesziregbe/Bakery-Sales-Data-Cleaning-and-Analysis-using-PostgreSQL/blob/main/ERD_bakery_sales.jpg)
 
 ## Project Structure
 
 The project is organized into several SQL files, each focusing on different aspects of the analysis:
 
-***I - Data Cleaning, transformation and table normalization***
+[***I - Data Cleaning, transformation and table normalization***](https://github.com/mosesziregbe/Bakery-Sales-Data-Cleaning-and-Analysis-using-PostgreSQL/blob/main/bakery_sales_data_cleaning_and_transformations.sql)
 - Initial data cleaning steps
 - Database normalization processes
 
-***II - Exploratory Data Analysis (Part A)***
+[***II - Exploratory Data Analysis (Part A)***](https://github.com/mosesziregbe/Bakery-Sales-Data-Cleaning-and-Analysis-using-PostgreSQL/blob/main/bakery_sales_eda_solutions1.sql)
 - Basic exploratory queries
 - Summary statistics
 - Initial insights into sales patterns
 
-***III - Exploratory Data Analysis (Part B)***
+[***III - Exploratory Data Analysis (Part B)***](https://github.com/mosesziregbe/Bakery-Sales-Data-Cleaning-and-Analysis-using-PostgreSQL/blob/main/bakery_sales_eda_solutions2.sql)
 - More advanced analytical queries
 - Deeper insights into product performance and customer/location behavior
 
-***IV - String Manipulation Questions (Part C)***
+[***IV - String Manipulation Questions (Part C)***](https://github.com/mosesziregbe/Bakery-Sales-Data-Cleaning-and-Analysis-using-PostgreSQL/blob/main/bakery_sales_string_questions.sql)
 - Queries involving string manipulation and analysis
 
 
-***V - More Business Analytic Questions (Part D)***
+[***V - More Business Analytic Questions (Part D)***](https://github.com/mosesziregbe/Bakery-Sales-Data-Cleaning-and-Analysis-using-PostgreSQL/blob/main/bakery_sales_more_business_analytics_solutions.sql)
 - Complex analytical queries addressing specific business questions
 
 
