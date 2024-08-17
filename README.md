@@ -5,9 +5,9 @@ This project involves the analysis of a bakery's sales data in South Korea using
 
 
 ## Tools Used
-PostgreSQL 
-pgAdmin 
-SQL for data querying and analysis
+- PostgreSQL 
+- pgAdmin 
+- SQL for data querying and analysis
 
 
 ## Dataset Description
@@ -64,6 +64,13 @@ The data cleaning process involved several steps:
 
 
 ## Data Normalization
+
+The normalization process involved:
+1. Creating a temporary table with assigned order IDs
+2. Unpivoting the product quantities from wide to long format
+3. Separating product information into a dedicated table
+4. Creating a sales table to link orders with products and quantities
+
 We normalized the data into three main tables:
 
 ### Orders Table
@@ -84,12 +91,6 @@ We normalized the data into three main tables:
 - order_id (Foreign Key referencing Orders)
 - product_id (Foreign Key referencing Products)
 - quantity
-
-The normalization process involved:
-1. Creating a temporary table with assigned order IDs
-2. Unpivoting the product quantities from wide to long format
-3. Separating product information into a dedicated table
-4. Creating a sales table to link orders with products and quantities
 
 The dataset is stored in a PostgreSQL database named bakery_db with the schema bakery_schema, with the three main tables: orders, products, and sales.
 
@@ -159,6 +160,12 @@ The project covers various aspects of the bakery's operations, including:
 4. Expansion Strategy: Focus on maintaining strong sales in the local area (Dongmyeon and Hoopyeong) while developing strategies to increase market share in other locations. This could include targeted advertising or considering new branch locations in high-potential areas.
 
 5. Menu Optimization: Given that only 35.87% of orders include beverages, consider strategies to increase beverage sales, such as combo deals or upselling techniques.
+
+
+## Additional Insights
+
+For more detailed summaries, key insights, and recommendations, please refer to the individual sections of our exploratory data analysis and business analytics queries.
+Each section contains in-depth analysis and specific recommendations based on different aspects of the bakery's operations and sales data.
 
 
 ## Future Work
