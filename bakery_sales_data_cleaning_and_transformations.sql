@@ -219,7 +219,7 @@ SELECT DISTINCT name FROM products;
 
 -- Also, I need to ensure the name in the products table matches with the 
 -- main table (bakery_sales) column names 
--- (this will be handled when normalizing the final table sales)
+-- (this will be handled within the final table, sales)
 
 SELECT angbutter, plain_bread, jam, americano, croissant, caffe_latte,
 	   tiramisu_croissant, cacao_deep, pain_au_chocolat, almond_croissant, 
