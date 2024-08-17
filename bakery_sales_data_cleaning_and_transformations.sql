@@ -135,7 +135,7 @@ SELECT * FROM bakery_prices;
 
 -- create new table for orders
 
-DROP TABLE orders;
+DROP TABLE IF EXISTS orders;
 
 CREATE TABLE orders (
   order_id SERIAL PRIMARY KEY,
@@ -178,7 +178,7 @@ SELECT * FROM bakery_prices
 	
 -- create table for products
 
-DROP TABLE products;
+DROP TABLE IF EXISTS products;
 
 CREATE TABLE products
 (product_id SERIAL PRIMARY KEY,
@@ -309,7 +309,7 @@ SELECT * FROM products;
 
 -- create sales table
 
-DROP TABLE sales;
+DROP TABLE IF EXISTS sales;
 
 CREATE TABLE sales (
 order_id INTEGER REFERENCES orders(order_id),
