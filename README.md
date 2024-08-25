@@ -20,6 +20,10 @@ The original dataset (bakery_sales) contains information about bakery orders, in
 - Total order amount
 - Customer's location
 - Quantities of various products ordered (e.g., angbutter, plain bread, jam, americano, etc.)
+
+The dataset contains 2420 rows and 27 columns.
+
+- Below is the sample of the original dataset showing few rows and columns:
   
 |datetime       |day of week|total|place  |angbutter|plain bread|jam|americano|croissant|caffe latte|tiramisu croissant|
 |---------------|-----------|-----|-------|---------|-----------|---|---------|---------|-----------|------------------|
@@ -31,9 +35,6 @@ The original dataset (bakery_sales) contains information about bakery orders, in
 |8/12/2019 13:56|Mon        |19100|석사동  |2        |           |   |1        |1        |           |                  |
 |8/12/2019 14:08|Mon        |32100|후평 1동|1        |           |   |2        |         |           |                  |
 |8/12/2019 15:01|Mon        |26000|소양동  |5        |           |   |         |         |           |                  |
-
-
-The dataset contains 27 columns.
 
 - `datetime` : order time
 - `day of week:` day of the week.
@@ -63,6 +64,31 @@ The dataset contains 27 columns.
 - `tiramisu`: tiramisu cake.
 - `merinque cookies`: cookies.
 
+-- Below is the bakery_prices table:
+
+|Name              |price    |
+|------------------|---------|
+|angbutter         |4800     |
+|plain bread       |3500     |
+|jam               |1500     |
+|ice coffe         |4000     |
+|croissant         |3500     |
+|ice coffe latter  |4500     |
+|tiramisu croissant|4800     |
+|cacao deep        |4000     |
+|pain au chocolat  |3500     |
+|almond croissant  |4000     |
+|ice milk tea      |4500     |
+|gateau chocolat   |4000     |
+|pandoro           |4500     |
+|cheese cake       |5000     |
+|lemon ade         |4500     |
+|orange pound      |4500     |
+|wiener            |2500     |
+|valina latte      |4500     |
+|berry ade         |4500     |
+|tiramisu          |4500     |
+|merinque cookies  |4000     |
 
 ## Data Cleaning
 
