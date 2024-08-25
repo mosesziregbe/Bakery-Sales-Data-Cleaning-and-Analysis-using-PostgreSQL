@@ -20,15 +20,17 @@ The original dataset (bakery_sales) contains information about bakery orders, in
 - Total order amount
 - Customer's location
 - Quantities of various products ordered (e.g., angbutter, plain bread, jam, americano, etc.)
-
-  |datetime       |day of week|total|place|angbutter|plain bread|jam|americano|croissant|caffe latte|tiramisu croissant|cacao deep|pain au chocolat|almond croissant|croque monsieur|mad garlic|milk tea|gateau chocolat|pandoro|cheese cake|lemon ade|orange pound|wiener|vanila latte|berry ade|tiramisu|merinque cookies|
-|---------------|-----------|-----|-----|---------|-----------|---|---------|---------|-----------|------------------|----------|----------------|----------------|---------------|----------|--------|---------------|-------|-----------|---------|------------|------|------------|---------|--------|----------------|
-|8/12/2019 12:39|Mon        |24300|효자 3동|1        |2          |   |         |3        |           |                  |          |                |                |               |          |        |               |       |           |         |            |      |            |         |        |                |
-|8/12/2019 12:41|Mon        |15800|효자 3동|1        |           |   |         |         |           |                  |          |                |                |               |          |        |               |1      |           |         |1           |      |            |         |        |                |
-|8/12/2019 12:48|Mon        |14800|후평 1동|1        |           |   |         |         |1          |                  |          |1               |                |               |          |        |               |       |           |         |            |      |            |         |        |                |
-|8/12/2019 12:53|Mon        |16300|후평 1동|1        |           |   |         |         |           |                  |          |                |1               |               |          |        |               |       |           |         |            |2     |            |         |        |                |
-|8/12/2019 13:27|Mon        |18300|후평 2동|1        |1          |   |         |         |           |                  |          |1               |1               |               |          |        |               |       |           |         |            |      |            |         |        |                |
-|8/12/2019 13:56|Mon        |19100|석사동  |2        |           |   |1        |1        |           |                  |          |                |                |               |          |        |               |       |           |         |            |      |            |         |        |                |
+  
+|datetime       |day of week|total|place  |angbutter|plain bread|jam|americano|croissant|caffe latte|tiramisu croissant|
+|---------------|-----------|-----|-------|---------|-----------|---|---------|---------|-----------|------------------|
+|8/12/2019 12:39|Mon        |24300|효자 3동|1        |2          |   |         |3        |           |                  |
+|8/12/2019 12:41|Mon        |15800|효자 3동|1        |           |   |         |         |           |                  |
+|8/12/2019 12:48|Mon        |14800|후평 1동|1        |           |   |         |         |1          |                  |
+|8/12/2019 12:53|Mon        |16300|후평 1동|1        |           |   |         |         |           |                  |
+|8/12/2019 13:27|Mon        |18300|후평 2동|1        |1          |   |         |         |           |                  |
+|8/12/2019 13:56|Mon        |19100|석사동  |2        |           |   |1        |1        |           |                  |
+|8/12/2019 14:08|Mon        |32100|후평 1동|1        |           |   |2        |         |           |                  |
+|8/12/2019 15:01|Mon        |26000|소양동  |5        |           |   |         |         |           |                  |
 
 
 The dataset contains 27 columns.
