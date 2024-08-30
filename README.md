@@ -23,6 +23,7 @@ The original dataset (bakery_sales) contains information about bakery orders, in
 
 The dataset contains 2420 rows and 27 columns.
 
+### bakery_sales table
 - Below is the sample of the original dataset (bakery_sales) showing few rows and columns:
   
 |datetime       |day of week|total|place  |angbutter|plain bread|jam|americano|croissant|caffe latte|tiramisu croissant|
@@ -64,6 +65,7 @@ The dataset contains 2420 rows and 27 columns.
 - `tiramisu`: tiramisu cake.
 - `merinque cookies`: cookies.
 
+### bakery_prices table
 - Below is the bakery_prices table:
 
 |Name              |price    |
