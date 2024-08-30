@@ -23,20 +23,6 @@ The original dataset (bakery_sales) contains information about bakery orders, in
 
 The dataset contains 2420 rows and 27 columns.
 
-### bakery_sales table
-- Below is the sample of the original dataset (bakery_sales) showing few rows and columns:
-  
-|datetime       |day of week|total|place  |angbutter|plain bread|jam|americano|croissant|caffe latte|tiramisu croissant|
-|---------------|-----------|-----|-------|---------|-----------|---|---------|---------|-----------|------------------|
-|8/12/2019 12:39|Mon        |24300|효자 3동|1        |2          |   |         |3        |           |                  |
-|8/12/2019 12:41|Mon        |15800|효자 3동|1        |           |   |         |         |           |                  |
-|8/12/2019 12:48|Mon        |14800|후평 1동|1        |           |   |         |         |1          |                  |
-|8/12/2019 12:53|Mon        |16300|후평 1동|1        |           |   |         |         |           |                  |
-|8/12/2019 13:27|Mon        |18300|후평 2동|1        |1          |   |         |         |           |                  |
-|8/12/2019 13:56|Mon        |19100|석사동  |2        |           |   |1        |1        |           |                  |
-|8/12/2019 14:08|Mon        |32100|후평 1동|1        |           |   |2        |         |           |                  |
-|8/12/2019 15:01|Mon        |26000|소양동  |5        |           |   |         |         |           |                  |
-
 - `datetime` : order time
 - `day of week:` day of the week.
 - `total`: Total Amount.
@@ -64,6 +50,21 @@ The dataset contains 2420 rows and 27 columns.
 - `berry ade`: berry ade.
 - `tiramisu`: tiramisu cake.
 - `merinque cookies`: cookies.
+
+### bakery_sales table
+- Below is the sample of the original dataset (bakery_sales) showing few rows and columns:
+  
+|datetime       |day of week|total|place  |angbutter|plain bread|jam|americano|croissant|caffe latte|tiramisu croissant|
+|---------------|-----------|-----|-------|---------|-----------|---|---------|---------|-----------|------------------|
+|8/12/2019 12:39|Mon        |24300|효자 3동|1        |2          |   |         |3        |           |                  |
+|8/12/2019 12:41|Mon        |15800|효자 3동|1        |           |   |         |         |           |                  |
+|8/12/2019 12:48|Mon        |14800|후평 1동|1        |           |   |         |         |1          |                  |
+|8/12/2019 12:53|Mon        |16300|후평 1동|1        |           |   |         |         |           |                  |
+|8/12/2019 13:27|Mon        |18300|후평 2동|1        |1          |   |         |         |           |                  |
+|8/12/2019 13:56|Mon        |19100|석사동  |2        |           |   |1        |1        |           |                  |
+|8/12/2019 14:08|Mon        |32100|후평 1동|1        |           |   |2        |         |           |                  |
+|8/12/2019 15:01|Mon        |26000|소양동  |5        |           |   |         |         |           |                  |
+
 
 ### bakery_prices table
 - Below is the bakery_prices table:
